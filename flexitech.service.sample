@@ -1,0 +1,14 @@
+[Unit]
+Description=flextracker micro-service
+
+[Service]
+Type=simple
+EnvironmentFile=~/.bashrc
+ExecStart=/root/deploy/go/src/bitbucket.org/flexitracker/flexitracker
+Restart=on-failure
+RestartSec=5
+startLimitIntervalSec=60
+
+
+[Install]
+WantedBy=multi-user.target
